@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>轩尼诗X.O 一场感官之旅</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullPage.js"></script>
+</head>
+<body>
+<!--分享-->
+<div id="share" class="alert" style="display: none;">
+	<div class="alShow">
+		<img src="image/logo.png" height="63" width="149"/>
+		<div>
+			<span class="s-logo1" onclick="tsina_a()">新浪微博</span>
+			<span class="s-logo2" onclick="weixin()">微信</span>
+			<span class="s-logo3" onclick="txWeibo()">腾讯微博</span>
+			<span class="s-logo4" onclick="qqZone()">QQ空间</span>
+		</div>
+
+	</div>
+</div>
+<!--微信分享弹窗-->
+<div id="wcShow" style="display: none;">
+	<h2>微信扫一扫</h2>
+	<hr>
+	<div id="wCShare"></div>
+	<span class="closeWC">X</span>
+</div>
+<div class="logo">
+    <img src="image/logo.png" alt="">
+</div>
+<div class="hd-nav">
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="feeling.html">轩尼诗X.O感官之旅</a></li>
+		<li class="active"><a class="active">谈酒论冰</a></li>
+		<li><a><img src="image/share.png" id="al-Share" alt=""></a></li>
+    </ul>
+</div>
+<div class="ft-nav">
+	<ul>
+		<li><a id="nav11">关注我们</a></li>
+		<li><a id="nav12">隐私政策</a></li>
+		<li class="active"><a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备10018200号-6</a></li>
+		<li><a href>请理性享用轩尼诗干邑</a></li>
+	</ul>
+</div>
+
+<div id="fullPage-nav">
+	<ul>
+		<li class="active"><a href="#page0"></a></li>
+		<li><a href="#page1"></a></li>
+		<!--<li><a href="#page2"></a></li>-->
+		<li><a href="#page3"></a></li>
+	</ul>
+</div>
+<div id="fullpage">
+	<div class="section" id="section-ice0">
+		<div class="wrapper">
+			<div class="circlebtn" style="left: 650px;margin-top: 180px;">
+				<div class="buybtn">
+					<a href="javascript:;"><img src="image/buybtn.png" height="100%" width="100%" ></a>
+				</div>
+				<div class="buybtn_over">
+					<a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购
+						<img src="image/buybtn.png" height="100%" ></a>
+				</div>
+			</div>
+			<div class="bottom_tip"></div>
+		</div>
+	</div>
+	<div class="section" id="section-ice1">
+		<div class="wrapper">
+			<div class="circlebtn" style="left: 650px;margin-top: 180px;">
+				<div class="buybtn">
+					<a href="javascript:;"><img src="image/buybtn.png" height="100%" width="100%"></a>
+				</div>
+				<div class="buybtn_over">
+					<a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img src="image/buybtn.png" height="100%"></a>
+				</div>
+			</div>
+			<div class="bottom_tip"></div>
+		</div>
+	</div>
+	<!--<div class="section" id="section-ice2">-->
+		<!--<div class="wrapper">-->
+			<!--<div class="circlebtn" style="left: 660px;margin-top: 360px;">-->
+				<!--<div class="buybtn">-->
+					<!--<a href="javascript:;"><img src="image/buybtn.png" ></a>-->
+				<!--</div>-->
+				<!--<div class="buybtn_over">-->
+					<!--<a href="javascript:void(0);"><img src="image/buybtn.png" ></a>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="bottom_tip"></div>-->
+		<!--</div>-->
+	<!--</div>-->
+	<div class="section" id="section-ice3">
+		<div class="wrapper">
+			<div class="circlebtn" style="left: 650px;margin-top: 200px;">
+				<div class="buybtn">
+					<a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+				</div>
+				<div class="buybtn_over">
+					<a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img src="image/buybtn.png" height="100%"></a>
+				</div>
+			</div>
+			<div class="bottom_tip" style="background:none;">
+				<a href="javascript:void(0);"><img src="image/scroll_tip5.png"></a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        anchors: ['page0', 'page1', 'page2', 'page3'],
+        continuousVertical: true,
+        onLeave: function(index, nextIndex, direction){
+            $("#section-ice"+(index-1)).find('.circlebtn').hide();
+            $("#section-ice"+(nextIndex-1)).find('.circlebtn').show();
+			$("#fullPage-nav li").eq(nextIndex-1).addClass("active").siblings().removeClass("active")
+        },
+    });
+
+    $('.buybtn').mouseenter(function(){
+        $(this).hide();
+        $(this).parent().stop().animate({'width':'340px'});
+        $(this).siblings().stop().show().animate({'left':'0px'});
+    });
+
+    $('.buybtn_over').mouseleave(function(){
+        var $this = $(this);
+        $this.parent().stop().animate({'width':'45px'});
+        $this.stop().animate({'left':'-307px'}, function(){
+            $this.siblings().show();
+            $this.hide();
+        });
+    })
+});
+</script>
+<script>
+    //生成微信分享二维码
+    $("#wCShare").qrcode({
+        render: "table", //table方式
+        width: 200, //宽度
+        height: 200, //高度
+        text: location.href //任意内容
+    });
+    //    微信分享
+
+    function weixin() {
+        $('#share').hide();
+        $('#wcShow').fadeIn();
+    }
+    //取消微信分享
+    $('.closeWC').click(function () {
+        $('#wcShow').hide();
+    })
+
+    //点击关闭分享
+    document.onclick =function () {
+        $('#share').hide();
+    };
+    $('#al-Share').click(function (e) {
+        e.stopPropagation();
+        $('#share').show();
+    });
+    //新浪分享
+    function tsina_a() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://v.t.sina.com.cn/share/share.php?"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+    //qq空间分享
+    function qqZone() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?"
+            , u = t.location.href
+            , f = ["url=", u,'&title=' ,t.title].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join("") + '&summary=');
+    }
+    //    腾讯微博分享
+    function txWeibo() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://share.v.t.qq.com/index.php?c=share&a=index&"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""),' ', ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+
+</script>
+
+</body>
+</html>

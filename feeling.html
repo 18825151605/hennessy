@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>轩尼诗X.O 一场感官之旅</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .section {
+            height: 100% !important;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullPage.js"></script>
+</head>
+
+<body style="height: 100%;width: 100%;">
+<!--分享-->
+<div id="share" class="alert" style="display: none;">
+    <div class="alShow">
+        <img src="image/logo.png" height="63" width="149"/>
+        <div>
+            <span class="s-logo1" onclick="tsina_a()">新浪微博</span>
+            <span class="s-logo2" onclick="weixin()">微信</span>
+            <span class="s-logo3" onclick="txWeibo()">腾讯微博</span>
+            <span class="s-logo4" onclick="qqZone()">QQ空间</span>
+        </div>
+
+    </div>
+</div>
+<!--微信分享弹窗-->
+<div id="wcShow" style="display: none;">
+    <h2>微信扫一扫</h2>
+    <hr>
+    <div id="wCShare"></div>
+    <span class="closeWC">X</span>
+</div>
+<div class="logo">
+    <img src="image/logo.png" alt="">
+</div>
+<div class="hd-nav">
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li class="active"><a class="active">轩尼诗X.O感官之旅</a></li>
+        <li><a href="wine-ice.html">谈酒论冰</a></li>
+        <li><a><img src="image/share.png" id="al-Share" alt=""></a></li>
+    </ul>
+</div>
+<div class="ft-nav">
+    <ul>
+        <li><a id="nav11">关注我们</a></li>
+        <li><a id="nav12">隐私政策</a></li>
+        <li class="active"><a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备10018200号-6</a></li>
+        <li><a href>请理性享用轩尼诗干邑</a></li>
+    </ul>
+</div>
+<div id="fullPage-nav">
+    <ul>
+        <li class="active"><a href="#page0"></a></li>
+        <li><a href="#page1"></a></li>
+        <li><a href="#page2"></a></li>
+        <li><a href="#page3"></a></li>
+        <li><a href="#page4"></a></li>
+        <li><a href="#page5"></a></li>
+        <li><a href="#page6"></a></li>
+        <li><a href="#page7"></a></li>
+    </ul>
+</div>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div class="video-wrap">
+            <div class="video-wrap-left">
+                <!--<span class="video-title">【“轩尼诗X.O感官之旅”导演剪辑版】</span>-->
+                <div class="video-bg">
+                    <img src="image/play.png" alt="" class="vPlay">
+                    <video data-target='0' preload="none" controls="controls" class="videoP acshow" src="image/ad.mp4"
+                           width="100%">
+
+                    </video>
+                    <video data-target='3' preload="none" controls="controls" class="videoP" src="image/cdm.mp4"
+                           width="100%"></video>
+                </div>
+            </div>
+            <div class="video-wrap-right show23">
+                <div class="prev slide-btn">
+                    <img src="image/up-arrow.png" alt="">
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        <li class="active">
+                            <div class="black-content">
+                                <span>【“轩尼诗X.O感官之旅”导演剪辑版】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img1.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img2.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img3.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>解码感官之旅</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next slide-btn">
+                    <img src="image/down-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="video-wrap-right show17">
+                <div class="prev slide-btn">
+                    <img src="image/up-arrow.png" alt="">
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        <li class="active">
+                            <div class="black-content">
+                                <span>【“轩尼诗X.O感官之旅”导演剪辑版】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img1.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img2.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img3.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>解码感官之旅</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next slide-btn">
+                    <img src="image/down-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="video-wrap-right show15">
+                <div class="prev slide-btn">
+                    <img src="image/up-arrow.png" alt="">
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        <li class="active">
+                            <div class="black-content">
+                                <span>【“轩尼诗X.O感官之旅”导演剪辑版】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img1.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img2.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img3.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>解码感官之旅</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next slide-btn">
+                    <img src="image/down-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="video-wrap-right show13">
+                <div class="prev slide-btn">
+                    <img src="image/up-arrow.png" alt="">
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        <li class="active">
+                            <div class="black-content">
+                                <span>【“轩尼诗X.O感官之旅”导演剪辑版】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img1.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img2.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img3.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>解码感官之旅</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next slide-btn">
+                    <img src="image/down-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="video-wrap-right show11">
+                <div class="prev slide-btn">
+                    <img src="image/up-arrow.png" alt="">
+                </div>
+                <div class="bd">
+                    <ul class="picList">
+                        <li class="active">
+                            <div class="black-content">
+                                <span>【“轩尼诗X.O感官之旅”导演剪辑版】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img1.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img2.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img3.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>解码感官之旅</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="black-content">
+                                <span>【更多精彩 敬请期待】</span>
+                            </div>
+                            <div class="pic">
+                                <img src="image/slide-img4.jpg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next slide-btn">
+                    <img src="image/down-arrow.png" alt="">
+                </div>
+            </div>
+            <div class="bottom_tip special"></div>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p1_text.png"></div>
+            <div class="circlebtn" style="margin-top: 240px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p2_text.png"></div>
+            <div class="circlebtn" style="margin-top: 235px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p3_text.png"></div>
+            <div class="circlebtn" style="margin-top: 240px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p4_text.png"></div>
+            <div class="circlebtn" style="margin-top: 240px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section5">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p5_text.png"></div>
+            <div class="circlebtn" style="margin-top: 240px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section6">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p6_text.png"></div>
+            <div class="circlebtn" style="margin-top: 285px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip"></div>
+        </div>
+    </div>
+    <div class="section" id="section7">
+        <div class="wrapper">
+            <div class="bgtext"><img src="image/p7_text.png"></div>
+            <div class="circlebtn" id="buy_07" style="margin-top: 310px;">
+                <div class="buybtn">
+                    <a href="javascript:;"><img src="image/buybtn.png" width="100%" height="100%"></a>
+                </div>
+                <div class="buybtn_over">
+                    <a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-16659567229.19.19335493lmLbYh&id=555677268005&scene">跃跃欲试?由此前往官方旗舰店选购<img
+                            src="image/buybtn.png" height="100%"></a>
+                </div>
+            </div>
+            <div class="bottom_tip" style="background:none;">
+                <a href="javascript:void(0);"><img src="image/scroll_tip6.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/SuperSlide.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            anchors: ['page0', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+            continuousVertical: true,
+            onLeave: function (index, nextIndex, direction) {
+                $("#section" + (index - 1)).find('.circlebtn').hide();
+                $("#section" + (nextIndex - 1)).find('.circlebtn').show();
+                $("#fullPage-nav li").eq(nextIndex - 1).addClass("active").siblings().removeClass("active");
+                if (nextIndex == 1) {
+                    $('.vPlay').show();
+//
+                }
+            },
+        });
+
+
+        $('.buybtn').mouseenter(function () {
+            $(this).hide();
+            $(this).parent().stop().animate({'width': '320px'});
+            $(this).siblings().stop().show().animate({'left': '0px'});
+        });
+
+        $('.buybtn_over').mouseleave(function () {
+            var $this = $(this);
+            $this.parent().stop().animate({'width': '45px'});
+            $this.stop().animate({'left': '-307px'}, function () {
+                $this.siblings().show();
+                $this.hide();
+            });
+        });
+
+        $(".video-wrap-right").slide({
+            mainCell: ".bd ul",
+            autoPage: true,
+            effect: "top",
+            autoPlay: false,
+            vis: 4,
+            trigger: "click"
+        });
+
+
+        $(".picList li").click(function () {
+            $(this).addClass("active").siblings(".active").removeClass("active")
+            $(".video-title").text($(this).find("span").text());
+        });
+
+
+    })
+    ;
+</script>
+<script>
+    //按钮 显示//隐藏
+    function btnHide() {
+        $btnPlay.hide();
+    }
+
+    function btnShow() {
+        $btnPlay.show();
+    }
+
+    var $btnPlay = $('.vPlay');//播放按钮
+    var $vidList = $('.video-bg').find('video');
+    var vidList = document.getElementsByTagName('video');
+    var $picList = $('.picList li');
+    var hasVid = true; //记录视频是否找到
+    for (var v = 0; v < vidList.length; v++) {
+        vidList[v].onclick = function () {
+            if (this.paused) {
+                this.play();
+                btnHide();
+                $vidList.css('opacity', 1)
+            } else {
+                this.pause()
+                btnShow();
+            }
+        }
+    }
+
+    $btnPlay.click(function () {
+        btnHide();
+        vidList[0].play();
+        $vidList.eq(0).css('opacity', 1);
+
+        for (var i = 0; i < $(this).siblings().length; i++) {
+            if (vidList[i].paused) {
+                vidList[i].play();
+            }
+        }
+        ;
+    })
+    $picList.click(function () {
+        var index = $(this).index();
+        //设置视频没有
+        hasVid = false;
+        console.log(index);
+        //如果找不到视频
+        btnHide();
+        $vidList.removeClass('acshow');
+        //如果找到视频
+        $vidList.each(function () {
+            $(this)[0].currentTime = 0;
+            if ($(this).attr('data-target') == index) {
+                hasVid = true;
+                btnHide();
+                $vidList.css('opacity', 1)
+                console.log($(this)[0])
+                $(this).addClass('acshow')
+                $(this)[0].play();
+            }
+        });
+    });
+</script>
+<script>
+    window.addEventListener('resize', function () {
+        var pageList = $('.section'),
+            wH = window.innerHeight + 'px',
+            wW = window.innerWidth + 'px';
+        pageList.css({heigth: wH, width: wW});
+    });
+</script>
+<script>
+    //生成微信分享二维码
+    $("#wCShare").qrcode({
+        render: "table", //table方式
+        width: 200, //宽度
+        height: 200, //高度
+        text: location.href //任意内容
+    });
+
+    //    微信分享
+
+    function weixin() {
+        $('#share').hide();
+        $('#wcShow').fadeIn();
+    }
+
+    //取消微信分享
+    $('.closeWC').click(function () {
+        $('#wcShow').hide();
+    })
+
+    //点击关闭分享
+    document.onclick = function () {
+        $('#share').hide();
+    };
+    $('#al-Share').click(function (e) {
+        e.stopPropagation();
+        $('#share').show();
+    });
+
+    //新浪分享
+    function tsina_a() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://v.t.sina.com.cn/share/share.php?"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+    //qq空间分享
+    function qqZone() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?"
+            , u = t.location.href
+            , f = ["url=", u,'&title=' ,t.title].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join("") + '&summary=');
+    }
+
+    //    腾讯微博分享
+    function txWeibo() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://share.v.t.qq.com/index.php?c=share&a=index&"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""), ' ', ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+
+</script>
+<script>
+    if (localStorage.pagecount == 1) {
+        localStorage.pagecount = 0;
+        $('#section0').css('background-image', 'url("image/feeling-bg5.jpg")')
+    }
+    else {
+        $('#section0').css('background-image', 'url("image/feeling-bg4.jpg")')
+        localStorage.pagecount = 1;
+    }
+</script>
+</body>
+</html>

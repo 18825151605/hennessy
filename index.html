@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;height: 100%;">
+<head>
+    <title>轩尼诗X.O 一场感官之旅</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        //查询来源地址
+        $(function () {
+            if (document.referrer.indexOf('feeling') != -1 || document.referrer.indexOf('wine-ice') != -1) {
+                $('body').find('#alert').hide()
+            } else {
+                $('body').find('#alert').show()
+            }
+        });
+    </script>
+</head>
+<body style="height: 100%;width: 100%;">
+<!--模态框-->
+<div id="alert" class="alert" style="display: none">
+    <div class="alShow">
+        <img src="image/logo.png" class="tit-logo" height="63" width="149"/>
+        <p>观看本视频前，请确保你已经年满十八周岁</p>
+        <!--<button class="cansel">是</button>-->
+    </div>
+</div>
+<!--分享-->
+<div id="share" class="alert" style="display: none;">
+    <div class="alShow">
+        <img src="image/logo.png" height="63" width="149"/>
+        <div>
+            <span class="s-logo1" onclick="tsina_a()">新浪微博</span>
+            <span class="s-logo2" onclick="weixin()">微信</span>
+            <span class="s-logo3" onclick="txWeibo()">腾讯微博</span>
+            <span class="s-logo4" onclick="qqZone()">QQ空间</span>
+        </div>
+
+    </div>
+</div>
+<!--微信分享弹窗-->
+<div id="wcShow" style="display: none;">
+    <h2>微信扫一扫</h2>
+    <hr>
+    <div id="wCShare"></div>
+    <span class="closeWC">X</span>
+</div>
+<div id="video" style="height: 100%;width: 100%;background-color:#000000;">
+    <div id="videoMo">
+        <video src="image/cdm.mp4" width="100%" height="100%" controls="controls"></video>
+    </div>
+</div>
+
+<div class=""></div>
+
+<div class="logo">
+    <img src="image/logo.png" alt="">
+</div>
+<div class="hd-nav">
+    <ul>
+        <li class="active"><a class="active">首页</a></li>
+        <li><a href="feeling.html">轩尼诗X.O感官之旅</a></li>
+        <li><a href="wine-ice.html">谈酒论冰</a></li>
+        <li><a><img src="image/share.png" id="al-Share" alt=""></a></li>
+    </ul>
+</div>
+<img class="index-play" src="image/play.png" alt="">
+<div class="index-bg center-bg"></div>
+<div class="ft-nav">
+    <ul>
+        <li><a id="nav11">关注我们</a></li>
+        <li><a id="nav12">隐私政策</a></li>
+        <li class="active"><a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备10018200号-6</a></li>
+        <li><a href>请理性享用轩尼诗干邑</a></li>
+    </ul>
+</div>
+<div class="overlayer"></div>
+<div class="msg-wrap">
+    <div class="joinqrcode"><img src="image/joinqrcode.png"></div>
+    <div class="joinqrcode_close"><img src="image/close.png"></div>
+
+    <div class="ystkbg">
+        <div id="ystkwrap">
+            <img src="image/ystk_2.png" width="704" height="1984">
+        </div>
+    </div>
+    <div class="ystkbg_close"><img src="image/close.png"></div>
+</div>
+
+<script src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.js"></script>
+<script>
+    //点击关闭模态框
+    var vidP = document.getElementById('videoMo'),
+        vidO = vidP.getElementsByTagName('video')[0];
+    //确认 播放
+    /*  $('#alert button').click(function () {
+          //播放视频
+          $('#alert').hide();
+          vidO.play();
+          $('.index-play').hide();
+
+      });*/
+    //18岁警示 2s消失
+    window.onload = function () {
+        setTimeout(function () {
+            $('#alert').hide();
+            $('.index-play').hide();
+            vidO.play();
+        }, 2000)
+    };
+
+    vidP.onclick = function () {
+        if (vidO.paused) {
+            vidO.play();
+            $('.index-play').hide();
+        } else {
+            vidO.pause();
+            $('.index-play').show();
+        }
+    }
+    //播放按钮
+    $('.index-play').click(function () {
+        $('#video').show();
+        $(this).hide();
+        $('#videoMo').show();
+        $('#videoMo').show();
+        vidO.play();
+    });
+    vidO.addEventListener('ended', function () {
+        $('#video').hide();
+        $('.index-play').show();
+        $('#videoMo').hide();
+    })
+    //取消空格播放视频
+    document.onkeydown = null;
+
+
+    $('#nav11').click(function () {
+        $(".joinqrcode,.joinqrcode_close,.overlayer,.msg-wrap").show();
+    });
+
+    $('#nav12').click(function () {
+        $(".ystkbg,.ystkbg_close,.overlayer,.msg-wrap").show();
+    });
+
+    $('.joinqrcode_close').click(function () {
+        $(".joinqrcode,.joinqrcode_close,.overlayer,.msg-wrap").hide();
+    });
+
+    $('.ystkbg_close').click(function () {
+        $(".ystkbg,.ystkbg_close,.overlayer,.msg-wrap").hide();
+    });
+
+
+    $('#ystkwrap').slimScroll({
+        alwaysVisible: true,
+        railVisible: true,
+        height: '510px',
+        width: '680px',
+        railColor: '#616161',
+        railBorderRadius: 0,
+        color: '#403f3f',
+        borderRadius: '0px',
+        opacity: 1
+    });
+</script>
+
+
+<script>
+    //生成微信分享二维码
+    $("#wCShare").qrcode({
+        render: "table", //table方式
+        width: 200, //宽度
+        height: 200, //高度
+        text: location.href //任意内容
+    });
+
+    //    微信分享
+
+    function weixin() {
+        $('#share').hide();
+        $('#wcShow').fadeIn();
+    }
+
+    //取消微信分享
+    $('.closeWC').click(function () {
+        $('#wcShow').hide();
+    })
+
+    //点击关闭分享
+    document.onclick = function () {
+        $('#share').hide();
+    };
+    $('#al-Share').click(function (e) {
+        e.stopPropagation();
+        $('#share').show();
+    });
+
+    //新浪分享
+    function tsina_a() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://v.t.sina.com.cn/share/share.php?"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+    //qq空间分享
+    function qqZone() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?"
+            , u = t.location.href
+            , f = ["url=", u, '&title=', t.title].join("");
+        window.open([r, f].join(""), "mb", ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join("") + '&summary=');
+    }
+
+    //    腾讯微博分享
+    function txWeibo() {
+        var n = screen
+            , t = document
+            , i = encodeURIComponent
+            , r = "http://share.v.t.qq.com/index.php?c=share&a=index&"
+            , u = t.location.href
+            , f = ["url=", i(u), "&title=", i(t.title)].join("");
+        window.open([r, f].join(""), ' ', ["toolbar=0,status=0,resizable=1,width=620,height=450,left=", (n.width - 620) / 2, ",top=", (n.height - 450) / 2].join("")) || (u.href = [r, f].join(""))
+    }
+
+
+</script>
+
+</body>
+</html>
